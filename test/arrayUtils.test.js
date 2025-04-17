@@ -3,23 +3,23 @@ import { findMax, findMin, removeDuplicates } from "../src/arrayUtils.js";
 
 describe("Array Utils", () => {
   describe("findMax", () => {
-    it("находит максимальное число", () => {
-      expect(findMax([1, 5, 10])).to.equal(10);
+    it("returns the maximum number from an array", () => {
+      expect(findMax([1, 5, 3])).to.equal(5);
     });
 
-    it("ошибка, если не массив", () => {
-      expect(() => findMax("123")).to.throw();
+    it("throws an error if input is not an array", () => {
+      expect(() => findMax("abc")).to.throw("Input must be an array");
     });
   });
 
   describe("findMin", () => {
-    it("находит минимальное число", () => {
-      expect(findMin([3, -2, 5])).to.equal(-2);
+    it("returns the minimum number from an array", () => {
+      expect(findMin([2, -4, 10])).to.equal(-4);
     });
   });
 
   describe("removeDuplicates", () => {
-    it("удаляет дубликаты", () => {
+    it("removes duplicate values from an array", () => {
       expect(removeDuplicates([1, 2, 2, 3])).to.deep.equal([1, 2, 3]);
     });
   });

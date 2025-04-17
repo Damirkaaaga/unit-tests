@@ -3,33 +3,33 @@ import { add, subtract, multiply, divide } from "../src/mathUtils.js";
 
 describe("Math Utils", () => {
   describe("add", () => {
-    it("возвращает сумму двух чисел", () => {
+    it("returns the sum of two numbers", () => {
       expect(add(2, 3)).to.equal(5);
     });
 
-    it("работает с отрицательными числами", () => {
-      expect(add(-4, 6)).to.equal(2);
+    it("works with negative numbers", () => {
+      expect(add(-1, -2)).to.equal(-3);
     });
   });
 
   describe("subtract", () => {
-    it("возвращает разность двух чисел", () => {
-      expect(subtract(7, 2)).to.equal(5);
+    it("returns the difference of two numbers", () => {
+      expect(subtract(5, 2)).to.equal(3);
     });
   });
 
   describe("multiply", () => {
-    it("возвращает произведение двух чисел", () => {
+    it("returns the product of two numbers", () => {
       expect(multiply(3, 4)).to.equal(12);
     });
   });
 
   describe("divide", () => {
-    it("делит два числа", () => {
+    it("returns the result of division", () => {
       expect(divide(10, 2)).to.equal(5);
     });
 
-    it("выбрасывает ошибку при делении на 0", () => {
+    it("throws an error when dividing by zero", () => {
       expect(() => divide(5, 0)).to.throw("Cannot divide by zero");
     });
   });

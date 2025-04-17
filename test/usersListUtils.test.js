@@ -3,7 +3,7 @@ import {
   filterUsersByAge,
   sortUsersByName,
   findUserById,
-  isEmailTaken,
+  isEmailTaken
 } from "../src/usersListUtils.js";
 
 describe("Users List Utils", () => {
@@ -14,36 +14,36 @@ describe("Users List Utils", () => {
   ];
 
   describe("filterUsersByAge", () => {
-    it("фильтрует пользователей по возрасту", () => {
-      const result = filterUsersByAge(users, 25);
+    it("filters users by age range", () => {
+      const result = filterUsersByAge(users, 21, 35);
       expect(result.length).to.equal(2);
     });
 
-    it("ошибка, если не массив", () => {
+    it("throws an error if input is not an array", () => {
       expect(() => filterUsersByAge("abc", 25)).to.throw();
     });
   });
 
   describe("sortUsersByName", () => {
-    it("сортирует по имени", () => {
+    it("sorts users alphabetically by name", () => {
       const result = sortUsersByName([...users]);
       expect(result[0].name).to.equal("Alice");
     });
   });
 
   describe("findUserById", () => {
-    it("находит пользователя по id", () => {
+    it("finds user by ID", () => {
       const result = findUserById(users, 2);
       expect(result.name).to.equal("Bob");
     });
   });
 
   describe("isEmailTaken", () => {
-    it("проверяет, существует ли email", () => {
+    it("returns true if email exists", () => {
       expect(isEmailTaken(users, "bob@mail.com")).to.be.true;
     });
 
-    it("false если email не найден", () => {
+    it("returns false if email not found", () => {
       expect(isEmailTaken(users, "no@mail.com")).to.be.false;
     });
   });
