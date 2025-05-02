@@ -1,2 +1,2 @@
-const test = 'Hello world';
+const test = 'Hello world'
 
