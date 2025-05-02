@@ -10,8 +10,8 @@ export default defineConfig([
     rules: {
       "no-unused-vars": ["warn"],
       "space-infix-ops": ["error"],
-      semi: ["error", "always"], 
-      quotes: ["error", "single"], 
+      semi: ["error", "always"],
+      quotes: ["error", "single"],
     },
   },
   {
