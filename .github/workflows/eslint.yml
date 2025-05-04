@@ -14,8 +14,10 @@ jobs:
         with:
           node-version: 18
 
-      - name: Make husky pre-commit executable
-        run: chmod +x .husky/pre-commit
+      - name: Fix husky permission
+        run: |
+          chmod +x .husky/pre-commit
+          chmod +x .husky/_/husky.sh || true
 
       - name: Install dependencies
         run: npm install
