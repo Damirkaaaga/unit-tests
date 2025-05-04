@@ -24,10 +24,5 @@
       "eslint --fix",
       "git add"
     ]
-  },
-  "rules": {
-    "space-infix-ops": [
-      "error"
-    ]
   }
 }
