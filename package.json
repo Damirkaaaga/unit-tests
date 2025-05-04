@@ -20,6 +20,6 @@
     "lint-staged": "^15.5.1"
   },
   "lint-staged": {
-    "*.js": "eslint --fix"
+    "*.{js,mjs,cjs}": "eslint --fix"
   }
 }
