@@ -5,18 +5,21 @@ import { defineConfig } from 'eslint/config';
 export default defineConfig([
   {
     files: ['**/*.{js,mjs,cjs}'],
-    plugins: { js },
-    extends: ['js/recommended'],
+    languageOptions: {
+      ecmaVersion: 2021,
+      sourceType: 'module',
+      globals: globals.browser,
+    },
+    plugins: {
+      js,
+    },
     rules: {
+      ...js.configs.recommended.rules, // ← Вот так подключаем recommended
       'no-unused-vars': ['warn'],
       'space-infix-ops': ['error'],
       semi: ['error', 'always'],
       quotes: ['error', 'single'],
     },
-  },
-  {
-    files: ['**/*.{js,mjs,cjs}'],
-    languageOptions: { globals: globals.browser },
   },
   {
     files: ['test/**/*.js'],
@@ -28,6 +31,17 @@ export default defineConfig([
         after: true,
         beforeEach: true,
         afterEach: true,
+      },
+    },
+  },
+  {
+    files: ['babel.config.cjs'],
+    languageOptions: {
+      sourceType: 'script',
+      globals: {
+        module: true,
+        require: true,
+        __dirname: true,
       },
     },
   },
