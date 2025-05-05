@@ -1,18 +1,17 @@
 module.exports = {
   env: {
     browser: true,
-    node: true,
-    mocha: true,
     es2021: true,
+    mocha: true,
   },
-  extends: ["eslint:recommended"],
+  extends: "eslint:recommended",
   parserOptions: {
-    ecmaVersion: "latest",
+    ecmaVersion: 12,
     sourceType: "module",
   },
   rules: {
-    "no-unused-vars": ["warn"],
-    "space-infix-ops": ["error"],
+    "no-unused-vars": "warn",
+    "space-infix-ops": "error",
     semi: ["error", "always"],
     quotes: ["error", "single"],
   },

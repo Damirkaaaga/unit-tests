@@ -6,7 +6,7 @@ eslint:
   stage: lint
   image: node:18
   script:
-    - npm install
+    - npm ci
     - npx eslint .
   only:
     - merge_requests
@@ -16,7 +16,7 @@ unit_tests:
   stage: test
   image: node:18
   script:
-    - npm install
+    - npm ci
     - npx c8 npm test
   only:
     - merge_requests
