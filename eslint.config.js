@@ -1,11 +1,11 @@
-import js from "@eslint/js";
+import js from '@eslint/js';
 
 export default [
   {
-    files: ["**/*.{js,jsx,ts,tsx}"],
+    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2021,
-      sourceType: "module",
+      sourceType: 'module',
       globals: {
         browser: true,
         node: true,
@@ -15,55 +15,55 @@ export default [
       ...js.configs.recommended.rules,
 
       // Code style
-      quotes: ["error", "single"],
-      "max-len": ["error", { code: 120 }],
-      semi: ["error", "always"],
-      indent: ["error", 2],
-      "no-trailing-spaces": "error",
-      "eol-last": ["error", "always"],
-      "no-multiple-empty-lines": ["error", { max: 1 }],
-      "comma-dangle": ["error", "always-multiline"],
-      "object-curly-spacing": ["error", "always"],
+      quotes: ['error', 'single'],
+      'max-len': ['error', { code: 120 }],
+      semi: ['error', 'always'],
+      indent: ['error', 2],
+      'no-trailing-spaces': 'error',
+      'eol-last': ['error', 'always'],
+      'no-multiple-empty-lines': ['error', { max: 1 }],
+      'comma-dangle': ['error', 'always-multiline'],
+      'object-curly-spacing': ['error', 'always'],
 
       // Variables
-      "no-var": "error",
-      "prefer-const": "error",
-      "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
-      camelcase: ["error", { properties: "always" }],
+      'no-var': 'error',
+      'prefer-const': 'error',
+      'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+      camelcase: ['error', { properties: 'always' }],
 
       // Functions
-      "arrow-spacing": ["error", { before: true, after: true }],
-      "space-before-function-paren": ["error", "never"],
-      "func-call-spacing": ["error", "never"],
-      "no-console": "warn",
+      'arrow-spacing': ['error', { before: true, after: true }],
+      'space-before-function-paren': ['error', 'never'],
+      'func-call-spacing': ['error', 'never'],
+      'no-console': 'warn',
 
       // Logic
-      eqeqeq: ["error", "always"],
-      "no-else-return": "error",
-      curly: ["error", "all"],
-      "no-fallthrough": "error",
-      "default-case": "error",
+      eqeqeq: ['error', 'always'],
+      'no-else-return': 'error',
+      curly: ['error', 'all'],
+      'no-fallthrough': 'error',
+      'default-case': 'error',
 
       // Security
-      "no-eval": "error",
-      "no-implied-eval": "error",
-      "no-new-func": "error",
-      "no-prototype-builtins": "error",
+      'no-eval': 'error',
+      'no-implied-eval': 'error',
+      'no-new-func': 'error',
+      'no-prototype-builtins': 'error',
 
       // ES6+
-      "prefer-arrow-callback": "error",
-      "no-duplicate-imports": "error",
-      "template-curly-spacing": ["error", "never"],
-      "rest-spread-spacing": ["error", "never"],
+      'prefer-arrow-callback': 'error',
+      'no-duplicate-imports': 'error',
+      'template-curly-spacing': ['error', 'never'],
+      'rest-spread-spacing': ['error', 'never'],
 
       // Misc
-      "no-debugger": "warn",
-      "no-undef": "error",
-      "consistent-return": "error",
+      'no-debugger': 'warn',
+      'no-undef': 'error',
+      'consistent-return': 'error',
     },
   },
   {
-    files: ["test/**/*.js"],
+    files: ['test/**/*.js'],
     languageOptions: {
       globals: {
         describe: true,
