@@ -3,7 +3,7 @@ import {
   filterUsersByAge,
   sortUsersByName,
   findUserById,
-  isEmailTaken
+  isEmailTaken,
 } from '../src/usersListUtils.js';
 
 describe('Users List Utils', () => {
